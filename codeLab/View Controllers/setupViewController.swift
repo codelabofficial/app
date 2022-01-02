@@ -14,12 +14,13 @@ class setupViewController: UIViewController {
     // MARK: - IBOutlet Setup
     */
     
+    @IBOutlet weak var eyeImageButton: UIButton!
+    @IBOutlet weak var eyeImage: UIImageView!
     @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var fullNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var confirmPasswordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var allFieldsMessage: UILabel!
     
@@ -37,13 +38,13 @@ class setupViewController: UIViewController {
         super.viewDidLoad()
         
         if FirebaseAuth.Auth.auth().currentUser != nil {
-            fullNameField.isHidden = true
+            fullNameField.isHidden = false
             emailField.isHidden = true
             passwordField.isHidden = true
-            confirmPasswordField.isHidden = true
             loginButton.isHidden = true
             loginLabel.text = "Logged in"
             logOutButton.isHidden = false
+            eyeImage.isHidden = true
         }
         
 
@@ -72,10 +73,10 @@ class setupViewController: UIViewController {
             fullNameField.isHidden = true
             emailField.isHidden = false
             passwordField.isHidden = false
-            confirmPasswordField.isHidden = true
             loginLabel.text = "Login"
             logOutButton.isHidden = true
             loginButton.isHidden = false
+            eyeImage.isHidden = false
             
             emailField.text = ""
             passwordField.text = ""
@@ -143,6 +144,7 @@ class setupViewController: UIViewController {
             strongSelf.passwordField.isHidden = true
             strongSelf.loginButton.isHidden = true
             strongSelf.logOutButton.isHidden = false
+            strongSelf.eyeImage.isHidden = true
         })
 
     }
@@ -171,6 +173,7 @@ class setupViewController: UIViewController {
                     strongSelf.passwordField.isHidden = true
                     strongSelf.loginButton.isHidden = true
                     strongSelf.logOutButton.isHidden = false
+                    strongSelf.eyeImage.isHidden = true
                 })
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
