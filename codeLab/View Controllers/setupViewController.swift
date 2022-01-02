@@ -51,6 +51,18 @@ class setupViewController: UIViewController {
     }
     
     /*
+    // MARK: - Visible password button
+    */
+    
+    @IBAction func eyeButtonTouched(_ sender: Any) {
+        if passwordField.isSecureTextEntry == true{
+            passwordField.isSecureTextEntry = false
+        } else {
+            passwordField.isSecureTextEntry = true
+        }
+        
+    }
+    /*
     // MARK: - Logging out
     */
     
