@@ -11,6 +11,8 @@ import Firebase
 class setupViewController: UIViewController {
     
     /*
+    
+    /*
     // MARK: - IBOutlet Setup
     */
     
@@ -153,6 +155,7 @@ class setupViewController: UIViewController {
         // MARK: - Create account
         */
         
+        /*
         func showCreateAccount(email: String, password: String) {
             let alert = UIAlertController(title: "No account found", message: "Would you like to create a account?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: {_ in
@@ -181,5 +184,10 @@ class setupViewController: UIViewController {
             
             present(alert, animated: true)
         }
+         
+         */
+     
+     */
+     
 
 }

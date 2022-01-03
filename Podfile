@@ -12,5 +12,7 @@ target 'codeLab' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
   pod 'Google-Mobile-Ads-SDK'
+  pod 'Firebase/Firestore'
+  pod 'RSKImageCropper'
 
 end

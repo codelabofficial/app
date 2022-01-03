@@ -7,14 +7,23 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class newSetupViewController: UIViewController {
+    
+    let defaults = UserDefaults.standard
+    
+    func replaceVC(id: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: id)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
+    }
     
     /*
     // MARK: - IBOutlet Setup
     */
 
-    @IBOutlet weak var loggedInMessage: UILabel!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var firstNameField: UITextField!
@@ -29,13 +38,14 @@ class newSetupViewController: UIViewController {
         emailField.autocorrectionType = .no
         emailField.autocapitalizationType = .none
         firstNameField.autocorrectionType = .no
-        firstNameField.autocapitalizationType = .none
+        firstNameField.autocapitalizationType = .words
         
         allFieldsMessage.isHidden = true
-        loggedInMessage.isHidden = true
 
         // Do any additional setup after loading the view.
     }
+    
+    
     
     /*
     // MARK: - Password visibility
@@ -52,6 +62,8 @@ class newSetupViewController: UIViewController {
     @IBAction func continueButtonPressed(_ sender: Any) {
         
         let name = firstNameField.text
+        defaults.set(name, forKey: "firstName")
+        print(defaults.string(forKey: "firstName")!)
         
         /*
         // MARK: - Check if empty
@@ -98,16 +110,15 @@ class newSetupViewController: UIViewController {
                 
             }
             
-            print("Login successful")
+            print("Login successful.")
             strongSelf.loginLabel.isHidden = true
             strongSelf.emailField.isHidden = true
             strongSelf.passwordField.isHidden = true
             strongSelf.eyeImage.isHidden = true
             strongSelf.firstNameField.isHidden = true
             strongSelf.continueButton.isHidden = true
-            strongSelf.loggedInMessage.isHidden = false
+            strongSelf.replaceVC(id: "tabBarVC")
         })
-
     }
     
     /*
@@ -124,24 +135,22 @@ class newSetupViewController: UIViewController {
                 
                 guard error == nil else {
                     print("Account creation failed")
+                    strongSelf.allFieldsMessage.text = "Login failed. Please try again."
+                    strongSelf.allFieldsMessage.isHidden = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
+                        self!.allFieldsMessage.isHidden = true
+                    }
                     return
-                    
                 }
                 
-                print("Login successful")
-                strongSelf.loginLabel.isHidden = true
-                strongSelf.emailField.isHidden = true
-                strongSelf.passwordField.isHidden = true
-                strongSelf.eyeImage.isHidden = true
-                strongSelf.firstNameField.isHidden = true
-                strongSelf.continueButton.isHidden = true
-                strongSelf.loggedInMessage.isHidden = false
+                print("Login successful.")
+                strongSelf.replaceVC(id: "tabBarVC")
+                
             })
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {_ in
         }))
-        
         present(alert, animated: true)
     }
-
 }
+
