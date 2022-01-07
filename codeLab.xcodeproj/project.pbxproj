@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		310876072787793300D715EF /* coursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310876062787793300D715EF /* coursesTableViewCell.swift */; };
 		3112C79D2780463400E6CD54 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3112C79C2780463400E6CD54 /* homeViewController.swift */; };
 		3112C79F2780465700E6CD54 /* lessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3112C79E2780465700E6CD54 /* lessonViewController.swift */; };
 		3112C7A12780466A00E6CD54 /* compilerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3112C7A02780466A00E6CD54 /* compilerViewController.swift */; };
@@ -18,16 +19,17 @@
 		3190532F277FD63100115013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3190532D277FD63100115013 /* Main.storyboard */; };
 		31905331277FD63200115013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31905330277FD63200115013 /* Assets.xcassets */; };
 		31905334277FD63200115013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31905332277FD63200115013 /* LaunchScreen.storyboard */; };
-		3193D9EC27824C550058001C /* newSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193D9EB27824C550058001C /* newSetupViewController.swift */; };
-		319F679A2780768C0000E017 /* setupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319F67992780768C0000E017 /* setupViewController.swift */; };
+		3193D9EC27824C550058001C /* setupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193D9EB27824C550058001C /* setupViewController.swift */; };
 		319F679C278078800000E017 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 319F679B278078800000E017 /* GoogleService-Info.plist */; };
-		31D3BBCD2782FF0E0058FE29 /* quarantine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D3BBCC2782FF0E0058FE29 /* quarantine.swift */; };
+		31A4AC1927889D95009E4DA4 /* quizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4AC1827889D95009E4DA4 /* quizViewController.swift */; };
 		31D3BBD227831ED90058FE29 /* fakeHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D3BBD127831ED90058FE29 /* fakeHomeViewController.swift */; };
 		31D3BBD6278370D50058FE29 /* circularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D3BBD5278370D50058FE29 /* circularImage.swift */; };
 		DCA4FA6B1B340D9046D6302C /* Pods_codeLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3B9EB353D30B86161A7EF7 /* Pods_codeLab.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		310876062787793300D715EF /* coursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coursesTableViewCell.swift; sourceTree = "<group>"; };
+		31112469278855640062850A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3112C79C2780463400E6CD54 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		3112C79E2780465700E6CD54 /* lessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lessonViewController.swift; sourceTree = "<group>"; };
 		3112C7A02780466A00E6CD54 /* compilerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = compilerViewController.swift; sourceTree = "<group>"; };
@@ -41,11 +43,9 @@
 		31905330277FD63200115013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31905333277FD63200115013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31905335277FD63200115013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3193D9EB27824C550058001C /* newSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newSetupViewController.swift; sourceTree = "<group>"; };
-		319F67992780768C0000E017 /* setupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupViewController.swift; sourceTree = "<group>"; };
+		3193D9EB27824C550058001C /* setupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupViewController.swift; sourceTree = "<group>"; };
 		319F679B278078800000E017 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		319F679D2780BC320000E017 /* codeLab.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = codeLab.entitlements; sourceTree = "<group>"; };
-		31D3BBCC2782FF0E0058FE29 /* quarantine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quarantine.swift; sourceTree = "<group>"; };
+		31A4AC1827889D95009E4DA4 /* quizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizViewController.swift; sourceTree = "<group>"; };
 		31D3BBD127831ED90058FE29 /* fakeHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fakeHomeViewController.swift; sourceTree = "<group>"; };
 		31D3BBD5278370D50058FE29 /* circularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = circularImage.swift; path = /Users/alfie/Documents/codeLab/codeLab/circularImage.swift; sourceTree = "<absolute>"; };
 		4A3B9EB353D30B86161A7EF7 /* Pods_codeLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_codeLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,19 +65,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3112C7A5278046BE00E6CD54 /* View Controllers */ = {
+		31112462278854620062850A /* Courses View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3193D9EB27824C550058001C /* newSetupViewController.swift */,
-				319F67992780768C0000E017 /* setupViewController.swift */,
-				3112C7A8278046EF00E6CD54 /* profileViewController.swift */,
+				310876062787793300D715EF /* coursesTableViewCell.swift */,
 				3112C7A6278046E300E6CD54 /* coursesViewController.swift */,
-				3112C79E2780465700E6CD54 /* lessonViewController.swift */,
-				3112C79C2780463400E6CD54 /* homeViewController.swift */,
+			);
+			name = "Courses View Controller";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		311124632788548D0062850A /* Home View Controller */ = {
+			isa = PBXGroup;
+			children = (
 				31D3BBD127831ED90058FE29 /* fakeHomeViewController.swift */,
+				3112C79C2780463400E6CD54 /* homeViewController.swift */,
+			);
+			name = "Home View Controller";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		31112464278854AE0062850A /* Compiler View Controller */ = {
+			isa = PBXGroup;
+			children = (
 				3112C7A02780466A00E6CD54 /* compilerViewController.swift */,
 			);
-			path = "View Controllers";
+			name = "Compiler View Controller";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		31112465278854C60062850A /* Profile View Controller + Setup */ = {
+			isa = PBXGroup;
+			children = (
+				31D3BBD5278370D50058FE29 /* circularImage.swift */,
+				3193D9EB27824C550058001C /* setupViewController.swift */,
+				3112C7A8278046EF00E6CD54 /* profileViewController.swift */,
+			);
+			path = "Profile View Controller + Setup";
+			sourceTree = "<group>";
+		};
+		31112467278855160062850A /* Lesson View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3112C79E2780465700E6CD54 /* lessonViewController.swift */,
+			);
+			name = "Lesson View Controller";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3190531B277FD63100115013 = {
@@ -100,20 +133,32 @@
 		31905326277FD63100115013 /* codeLab */ = {
 			isa = PBXGroup;
 			children = (
-				31D3BBD5278370D50058FE29 /* circularImage.swift */,
-				319F679D2780BC320000E017 /* codeLab.entitlements */,
-				31905327277FD63100115013 /* AppDelegate.swift */,
+				31905335277FD63200115013 /* Info.plist */,
+				31112469278855640062850A /* GoogleService-Info.plist */,
+				31A4AC1A27889D9F009E4DA4 /* Quiz View Controller */,
+				31112467278855160062850A /* Lesson View Controller */,
+				31112465278854C60062850A /* Profile View Controller + Setup */,
+				31112464278854AE0062850A /* Compiler View Controller */,
+				311124632788548D0062850A /* Home View Controller */,
+				31112462278854620062850A /* Courses View Controller */,
 				31905329277FD63100115013 /* SceneDelegate.swift */,
 				3190532B277FD63100115013 /* ViewController.swift */,
+				31905327277FD63100115013 /* AppDelegate.swift */,
 				3190532D277FD63100115013 /* Main.storyboard */,
 				31905330277FD63200115013 /* Assets.xcassets */,
-				31D3BBCC2782FF0E0058FE29 /* quarantine.swift */,
 				31905332277FD63200115013 /* LaunchScreen.storyboard */,
-				31905335277FD63200115013 /* Info.plist */,
 				319F679B278078800000E017 /* GoogleService-Info.plist */,
-				3112C7A5278046BE00E6CD54 /* View Controllers */,
 			);
 			path = codeLab;
+			sourceTree = "<group>";
+		};
+		31A4AC1A27889D9F009E4DA4 /* Quiz View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				31A4AC1827889D95009E4DA4 /* quizViewController.swift */,
+			);
+			name = "Quiz View Controller";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		44CF39A09C6374615F97DBDE /* Pods */ = {
@@ -251,17 +296,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31A4AC1927889D95009E4DA4 /* quizViewController.swift in Sources */,
 				3190532C277FD63100115013 /* ViewController.swift in Sources */,
 				3112C7A12780466A00E6CD54 /* compilerViewController.swift in Sources */,
 				31D3BBD227831ED90058FE29 /* fakeHomeViewController.swift in Sources */,
 				31905328277FD63100115013 /* AppDelegate.swift in Sources */,
+				310876072787793300D715EF /* coursesTableViewCell.swift in Sources */,
 				3190532A277FD63100115013 /* SceneDelegate.swift in Sources */,
 				3112C79D2780463400E6CD54 /* homeViewController.swift in Sources */,
 				3112C79F2780465700E6CD54 /* lessonViewController.swift in Sources */,
 				31D3BBD6278370D50058FE29 /* circularImage.swift in Sources */,
-				319F679A2780768C0000E017 /* setupViewController.swift in Sources */,
-				31D3BBCD2782FF0E0058FE29 /* quarantine.swift in Sources */,
-				3193D9EC27824C550058001C /* newSetupViewController.swift in Sources */,
+				3193D9EC27824C550058001C /* setupViewController.swift in Sources */,
 				3112C7A9278046EF00E6CD54 /* profileViewController.swift in Sources */,
 				3112C7A7278046E300E6CD54 /* coursesViewController.swift in Sources */,
 			);
@@ -411,7 +456,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = codeLab/codeLab.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 76V43E9CWT;
@@ -443,7 +487,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = codeLab/codeLab.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 76V43E9CWT;

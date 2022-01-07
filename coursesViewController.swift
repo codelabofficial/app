@@ -9,6 +9,8 @@ import UIKit
 
 class coursesViewController: UIViewController {
     
+    let defaults = UserDefaults.standard
+    
     /*
     // MARK: - Course options
     */
@@ -66,22 +68,35 @@ class coursesViewController: UIViewController {
         if clicked == "JavaScript" {
             selected = languages.JavaScript
         }
+        defaults.set("\(selected)", forKey: "language")
+        //profileViewController.currentLanguage.text = "\((defaults.set("\(selected)", forKey: "language")!))"
         return selected
     }
     
     /*
     // MARK: - IBOutlet Setup
     */
-
     @IBOutlet weak var coursesTable: UITableView!
     
+    @IBAction func quizButton(_ sender: Any) {
+        print("Quiz")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         coursesTable.delegate = self
         coursesTable.dataSource = self
+        
+        coursesTable.separatorStyle = .none
+        coursesTable.showsVerticalScrollIndicator = false
 
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let selectedIndexPath = coursesTable.indexPathForSelectedRow {
+            coursesTable.deselectRow(at: selectedIndexPath, animated: animated)
+        }
     }
 
 }
@@ -90,37 +105,42 @@ class coursesViewController: UIViewController {
 // MARK: - TableView Delegate
 */
 
-extension coursesViewController: UITableViewDataSource {
+extension coursesViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coursesOffered.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "courses", for: indexPath)
-        cell.textLabel?.text = coursesOffered[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "courses") as! coursesTableViewCell
+        let courseType = coursesOffered[indexPath.row]
+        
+        cell.courseLabel.text = courseType
+        cell.courseImage.image = UIImage(named: courseType)
+        
+        if courseType == "C++" {
+            cell.courseImage.image = UIImage(named: "Cpp")
+        }
+        
+        cell.courseView.layer.cornerRadius = cell.courseView.frame.height / 2
+        
         return cell
     }
-}
-
-/*
-// MARK: - TableView DataSource
-*/
-
-extension coursesViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cellText = coursesTable.cellForRow(at: indexPath)?.textLabel?.text
-        print("\(cellText!) tapped")
-        let selectedLanguage: languages = selectLanguage(clicked: cellText!)
-        print(selectedLanguage)
-        var selectedLanguagePrint = ""
-        if selectedLanguage == languages.Cpp {
-            selectedLanguagePrint = "C++"
-        } else {
-            selectedLanguagePrint = "\(selectedLanguage)"
-        }
-        let confirmationMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to select \(selectedLanguagePrint)?", preferredStyle: .actionSheet)
+        
+        let courseInCell = coursesOffered[indexPath.row]
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "courses") as! coursesTableViewCell
+        let selectedLanguage = String(describing: courseInCell)
+        
+        print("Selected \(selectedLanguage)")
+        let confirmationMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to select \(courseInCell)?", preferredStyle: .actionSheet)
         let ok = UIAlertAction(title: "Yes", style: .default) { (action) -> Void in
             print("Yes tapped")
+            self.selectLanguage(clicked: selectedLanguage)
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
             print("Cancel tapped")
@@ -130,5 +150,6 @@ extension coursesViewController: UITableViewDelegate {
         confirmationMessage.addAction(cancel)
         
         self.present(confirmationMessage, animated: true, completion: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

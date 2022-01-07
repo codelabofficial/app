@@ -35,7 +35,7 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var profilePhoto: circularImage!
     @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var journeyMessage: UILabel!
-    
+    @IBOutlet weak var currentLanguage: UILabel!
     
     /*
     // MARK: - Image Cropping
@@ -71,7 +71,6 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 self.imagePicker.delegate = self
                 self.imagePicker.sourceType = UIImagePickerController.SourceType.camera
                 self.imagePicker.allowsEditing = false
-                //self.imagePicker.mediaTypes = [kUTTypeImage as String]
                 self.present(self.imagePicker, animated: true, completion: nil)
             }
             captureMediaActionSheet.addAction(cameraAction)
@@ -80,18 +79,23 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 self.imagePicker.delegate = self
                 self.imagePicker.sourceType = UIImagePickerController.SourceType.savedPhotosAlbum
                 self.imagePicker.allowsEditing = false
-                //self.imagePicker.mediaTypes = [kUTTypeImage as String]
                 self.present(self.imagePicker, animated: true, completion: nil)
             }
             captureMediaActionSheet.addAction(galleryAction)
         }
     
     /*
-    // MARK: - ViewDidLoad()
+    // MARK: - viewDidLoad() override
     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if defaults.string(forKey: "language") != nil {
+            currentLanguage.text = "\(String(describing: defaults.string(forKey: "language")!))"
+            if defaults.string(forKey: "language") == "Cpp" {
+                currentLanguage.text = "C++"
+            }
+        }
         var pfpImageData = Data(base64Encoded: (defaults.string(forKey: "pfp")!))
         if var pfpImageData = pfpImageData {
             profilePhoto.image = UIImage(data: pfpImageData, scale: 1)
@@ -102,6 +106,17 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
         profilePhoto.layer.cornerRadius = profilePhoto.bounds.height/2
         profilePhoto.layer.masksToBounds = true
         journeyMessage.text = "\(defaults.string(forKey: "firstName")!)'s programming journey"
+    }
+    
+    /*
+    // MARK: - viewDidAppear() override
+    */
+    
+    // Make sure language label changes if language
+    // Selection changes in the same session
+    
+    override func viewDidAppear(_ animated: Bool) {
+        viewDidLoad()
     }
     
     /*

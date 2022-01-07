@@ -1,5 +1,5 @@
 //
-//  newSetupViewController.swift
+//  setupViewController.swift
 //  codeLab
 //
 //  Created by Alfie on 02/01/2022.
@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class newSetupViewController: UIViewController {
+class setupViewController: UIViewController {
     
     let defaults = UserDefaults.standard
     
@@ -118,6 +118,10 @@ class newSetupViewController: UIViewController {
             strongSelf.firstNameField.isHidden = true
             strongSelf.continueButton.isHidden = true
             strongSelf.replaceVC(id: "tabBarVC")
+            var defaultImage = UIImage(systemName: "person")
+            var defaultImageData = defaultImage?.jpegData(compressionQuality: 1)
+            var defaultImageDataBase64 = defaultImageData?.base64EncodedString()
+            self?.defaults.set(defaultImageDataBase64, forKey: "pfp")
         })
     }
     
@@ -145,6 +149,10 @@ class newSetupViewController: UIViewController {
                 
                 print("Login successful.")
                 strongSelf.replaceVC(id: "tabBarVC")
+                var defaultImage = UIImage(systemName: "person")
+                var defaultImageData = defaultImage?.jpegData(compressionQuality: 1)
+                var defaultImageDataBase64 = defaultImageData?.base64EncodedString()
+                self?.defaults.set(defaultImageDataBase64, forKey: "pfp")
                 
             })
         }))
