@@ -37,7 +37,7 @@
   <p align="center">
     An upcoming app that teaches people to code for free!
     <br />
-    <a href="https://github.com/codelaboffical/app"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/codelabofficial/app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://codelabapp.uk">View Demo</a>
