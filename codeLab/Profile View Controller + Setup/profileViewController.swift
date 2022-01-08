@@ -136,7 +136,7 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
             try Firebase.Auth.auth().signOut()
             logOutButton.isHidden = true
             super.viewDidLoad()
-            replaceVC(id: "newSetupVC")
+            replaceVC(id: "setupVC")
             
         } catch {
             print("An error occured while signing out")

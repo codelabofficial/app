@@ -9,6 +9,13 @@ import UIKit
 
 class coursesViewController: UIViewController {
     
+    func replaceVC(id: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: id)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
+    }
+    
     let defaults = UserDefaults.standard
     
     /*
@@ -80,6 +87,7 @@ class coursesViewController: UIViewController {
     
     @IBAction func quizButton(_ sender: Any) {
         print("Quiz")
+        replaceVC(id: "quizVC")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
