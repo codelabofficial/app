@@ -6,13 +6,28 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
+    
+    func replaceVC(id: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: id)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil {
+            print("Logged in already")
+        } else { replaceVC(id: "setupVC") }
     }
 
 

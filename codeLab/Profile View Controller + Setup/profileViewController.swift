@@ -137,7 +137,7 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
             logOutButton.isHidden = true
             super.viewDidLoad()
             replaceVC(id: "setupVC")
-            
+            defaults.set("Not assigned!", forKey: "language")
         } catch {
             print("An error occured while signing out")
             super.viewDidLoad()

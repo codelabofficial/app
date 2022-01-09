@@ -22,8 +22,8 @@
 		3193D9EC27824C550058001C /* setupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193D9EB27824C550058001C /* setupViewController.swift */; };
 		319F679C278078800000E017 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 319F679B278078800000E017 /* GoogleService-Info.plist */; };
 		31A4AC1927889D95009E4DA4 /* quizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4AC1827889D95009E4DA4 /* quizViewController.swift */; };
-		31D3BBD227831ED90058FE29 /* fakeHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D3BBD127831ED90058FE29 /* fakeHomeViewController.swift */; };
 		31D3BBD6278370D50058FE29 /* circularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D3BBD5278370D50058FE29 /* circularImage.swift */; };
+		779855551708DA06237A602B /* Pods_codeLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A059BAD6AE5021158E3FE8C8 /* Pods_codeLab.framework */; };
 		DCA4FA6B1B340D9046D6302C /* Pods_codeLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3B9EB353D30B86161A7EF7 /* Pods_codeLab.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,11 +46,11 @@
 		3193D9EB27824C550058001C /* setupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupViewController.swift; sourceTree = "<group>"; };
 		319F679B278078800000E017 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		31A4AC1827889D95009E4DA4 /* quizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizViewController.swift; sourceTree = "<group>"; };
-		31D3BBD127831ED90058FE29 /* fakeHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fakeHomeViewController.swift; sourceTree = "<group>"; };
 		31D3BBD5278370D50058FE29 /* circularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = circularImage.swift; path = /Users/alfie/Documents/codeLab/codeLab/circularImage.swift; sourceTree = "<absolute>"; };
 		4A3B9EB353D30B86161A7EF7 /* Pods_codeLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_codeLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		578B71EBE51DD0D5BC1DEFE2 /* Pods-codeLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codeLab.release.xcconfig"; path = "Target Support Files/Pods-codeLab/Pods-codeLab.release.xcconfig"; sourceTree = "<group>"; };
 		68C7F227B3192152C2001DEC /* Pods-codeLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codeLab.debug.xcconfig"; path = "Target Support Files/Pods-codeLab/Pods-codeLab.debug.xcconfig"; sourceTree = "<group>"; };
+		A059BAD6AE5021158E3FE8C8 /* Pods_codeLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_codeLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +59,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCA4FA6B1B340D9046D6302C /* Pods_codeLab.framework in Frameworks */,
+				779855551708DA06237A602B /* Pods_codeLab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E2BEC3168D5F55EEF90A41A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A059BAD6AE5021158E3FE8C8 /* Pods_codeLab.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		31112462278854620062850A /* Courses View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +87,6 @@
 		311124632788548D0062850A /* Home View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				31D3BBD127831ED90058FE29 /* fakeHomeViewController.swift */,
 				3112C79C2780463400E6CD54 /* homeViewController.swift */,
 			);
 			name = "Home View Controller";
@@ -119,6 +127,7 @@
 				31905326277FD63100115013 /* codeLab */,
 				31905325277FD63100115013 /* Products */,
 				44CF39A09C6374615F97DBDE /* Pods */,
+				1E2BEC3168D5F55EEF90A41A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -299,7 +308,6 @@
 				31A4AC1927889D95009E4DA4 /* quizViewController.swift in Sources */,
 				3190532C277FD63100115013 /* ViewController.swift in Sources */,
 				3112C7A12780466A00E6CD54 /* compilerViewController.swift in Sources */,
-				31D3BBD227831ED90058FE29 /* fakeHomeViewController.swift in Sources */,
 				31905328277FD63100115013 /* AppDelegate.swift in Sources */,
 				310876072787793300D715EF /* coursesTableViewCell.swift in Sources */,
 				3190532A277FD63100115013 /* SceneDelegate.swift in Sources */,

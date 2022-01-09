@@ -42,9 +42,17 @@ class quizViewController: UIViewController {
     @IBOutlet weak var button8: UIButton!
     @IBOutlet weak var button9: UIButton!
     @IBOutlet weak var resultsSubheading: UILabel!
+    @IBOutlet weak var returnButton: UIButton!
     
     let question1: [String:String] = ["questionLabel": "Which of these languages do you have the most experience in?", "button1": "C", "button2": "C++", "button3": "Python", "button4": "Swift", "button5": "Java", "button6": "HTML", "button7": "CSS", "button8": "JavaScript", "button9": "None"]
     let question2: [String:String] = ["questionLabel": "Why did you install codeLab?", "button1": "", "button2": "", "button3": "I want to learn to code", "button4": "I've coded before, and want to refresh my skills", "button5": "I am an experienced programmer and want to keep learning", "button6": "I want to build websites", "button7": "I want to build apps", "button8": "", "button9": ""]
+    
+    func replaceVC(id: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: id)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
+    }
     
     func firstQuestion() {
         questionLabel.text = question1["questionLabel"]
@@ -84,6 +92,7 @@ class quizViewController: UIViewController {
         button7.isHidden = true
         button8.isHidden = true
         button9.isHidden = true
+        returnButton.isHidden = false
         resultsSubheading.isHidden = false
         let currentQuestion: Int = 3
         defaults.set(currentQuestion, forKey: "currentQuestion")
@@ -283,6 +292,9 @@ class quizViewController: UIViewController {
         }
     }
     
+    @IBAction func returnPressed(_ sender: Any) {
+        replaceVC(id: "tabBarVC")
+    }
     /*
     // MARK: - Navigation
 

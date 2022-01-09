@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DQD-TC-ypB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R3y-7r-w4n">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -92,33 +92,6 @@
             </objects>
             <point key="canvasLocation" x="817.39130434782612" y="627.45535714285711"/>
         </scene>
-        <!--fakeHomeViewController-->
-        <scene sceneID="PZV-it-smG">
-            <objects>
-                <viewController storyboardIdentifier="fakeHomeVC" title="fakeHomeViewController" id="DQD-TC-ypB" customClass="fakeHomeViewController" customModule="codeLab" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="e7h-5u-Idu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome back, " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKQ-Nx-XG4">
-                                <rect key="frame" x="118" y="176" width="178" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="mVb-N3-QTd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="welcomeMessage" destination="IKQ-Nx-XG4" id="15h-mG-HaR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y38-Kp-EDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2025" y="627"/>
-        </scene>
         <!--homeViewController-->
         <scene sceneID="0z5-hf-Ysi">
             <objects>
@@ -127,10 +100,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome back, " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z6-st-zlz">
-                                <rect key="frame" x="118" y="179" width="178" height="44"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vri-wd-CH1">
+                                <rect key="frame" x="159" y="240" width="96" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cql-9f-045">
+                                <rect key="frame" x="107" y="444" width="50" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="filled" title="👍"/>
+                                <connections>
+                                    <action selector="thumbsUpButtonPressed:" destination="bBd-wk-bTM" eventType="touchUpInside" id="8l3-al-kSL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="row-0s-HsY">
+                                <rect key="frame" x="257" y="444" width="50" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="filled" title="👎"/>
+                                <connections>
+                                    <action selector="thumbsDownButtonPressed:" destination="bBd-wk-bTM" eventType="touchUpInside" id="yJp-eC-oUP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome back, " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z6-st-zlz">
+                                <rect key="frame" x="2" y="87" width="410" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-jh-NAb">
+                                <rect key="frame" x="20" y="367" width="374" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -140,12 +140,16 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="eoT-af-gzK"/>
                     <connections>
+                        <outlet property="checkupMessage" destination="WNb-jh-NAb" id="fbb-nS-h6n"/>
+                        <outlet property="languageImage" destination="Vri-wd-CH1" id="UpJ-eS-gK0"/>
+                        <outlet property="thumbsDownButton" destination="row-0s-HsY" id="aU1-qc-8Xx"/>
+                        <outlet property="thumbsUpButton" destination="Cql-9f-045" id="0g0-DK-F07"/>
                         <outlet property="welcomeMessage" destination="0Z6-st-zlz" id="4K5-TT-0xP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcY-jt-jt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1293" y="627"/>
+            <point key="canvasLocation" x="-1294.2028985507247" y="626.78571428571422"/>
         </scene>
         <!--lessonViewController-->
         <scene sceneID="ttI-hd-DRN">
@@ -514,6 +518,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecq-2P-yPH">
+                                <rect key="frame" x="164" y="774" width="96" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Return"/>
+                                <connections>
+                                    <action selector="returnPressed:" destination="eqq-Nh-VPN" eventType="touchUpInside" id="hPk-uW-pni"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gu2-8L-e7C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -561,6 +574,7 @@
                         <outlet property="button9" destination="SnA-QV-LGW" id="CO2-tk-Rrh"/>
                         <outlet property="questionLabel" destination="tcd-lB-V6I" id="O9B-RL-b1R"/>
                         <outlet property="resultsSubheading" destination="lEs-EA-Mss" id="d3e-Nj-Apr"/>
+                        <outlet property="returnButton" destination="Ecq-2P-yPH" id="WhS-w0-4re"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ds9-0n-67C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
