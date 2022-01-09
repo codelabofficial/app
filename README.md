@@ -127,7 +127,7 @@ _Below is an example of how you can instruct your audience on installing and set
 1. Setup your Firebase app with authentication at [https://firebase.google.com](https://firebase.google.com)
 2. Replace the `GoogleService-Info.plist` with the one generated when setting up your Firebase app
 3. Make sure you are using `codeLab.xcworkspace`
-4. Edit the `info.plist` file and add your App ID at GADApplicationIdentifier
+4. Edit the `Info.plist` file and add your App ID at GADApplicationIdentifier
 5. Build the project
 
 <p align="right">(<a href="#top">back to top</a>)</p>
