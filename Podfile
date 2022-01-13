@@ -15,5 +15,7 @@ target 'codeLab' do
   pod 'Firebase/Firestore'
   pod 'RSKImageCropper'
   pod 'SPConfetti'
+  pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
 
 end

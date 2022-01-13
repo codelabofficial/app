@@ -12,6 +12,9 @@ import grpc
 import MobileCoreServices
 import Photos
 import PhotosUI
+import FirebaseStorage
+import SDWebImage
+import FirebaseStorageUI
 
 class profileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, RSKImageCropViewControllerDelegate {
     
@@ -19,6 +22,8 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
     var image: UIImage!
     var captureMediaActionSheet : UIAlertController!
     let defaults = UserDefaults.standard
+    let storage = Storage.storage()
+    let storageRef = Storage.storage().reference()
     
     /*
     // MARK: - ReplaceVC Function
@@ -47,8 +52,25 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imageCropViewController(_ controller: RSKImageCropViewController, didCropImage croppedImage: UIImage, usingCropRect cropRect: CGRect, rotationAngle: CGFloat) {
         profilePhoto.image = croppedImage
-        var croppedImageData = croppedImage.jpegData(compressionQuality: 1)
-        var croppedImageDataBase64 = croppedImageData?.base64EncodedString()
+        
+        let uuid = (Auth.auth().currentUser?.uid)!
+        
+        let data = Data()
+        
+        let metadata = StorageMetadata()
+        metadata.contentType = "jpg"
+
+        // Create a reference to the file you want to upload
+        let pythonRef = storageRef.child("\(String(describing: uuid))/ProfilePicture.jpg")
+
+        // Upload the file to the path "images/Firebase.jpg"
+        pythonRef.putData(data, metadata: metadata)
+
+        // Upload file and metadata
+        //pythonRef.putFile(from: localFile, metadata: metadata)
+        pythonRef.putData(croppedImage.jpegData(compressionQuality: 1.0)!)
+        let croppedImageData = croppedImage.jpegData(compressionQuality: 1)
+        let croppedImageDataBase64 = croppedImageData?.base64EncodedString()
         defaults.set(croppedImageDataBase64, forKey: "pfp")
         dismiss(animated: true, completion: nil)
     }
@@ -89,6 +111,9 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
     */
     
     override func viewDidLoad() {
+        
+        let uuid = (Auth.auth().currentUser?.uid)!
+        
         super.viewDidLoad()
         if defaults.string(forKey: "language") != nil {
             currentLanguage.text = "\(String(describing: defaults.string(forKey: "language")!))"
@@ -96,12 +121,41 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 currentLanguage.text = "C++"
             }
         }
-        var pfpImageData = Data(base64Encoded: (defaults.string(forKey: "pfp")!))
-        if var pfpImageData = pfpImageData {
-            profilePhoto.image = UIImage(data: pfpImageData, scale: 1)
-        } else {
-            profilePhoto.image = UIImage(systemName: "person")
+//        var pfpImageData = Data(base64Encoded: (defaults.string(forKey: "pfp")!))
+//        if var pfpImageData = pfpImageData {
+//            profilePhoto.image = UIImage(data: pfpImageData, scale: 1)
+//        } else {
+//            profilePhoto.image = UIImage(systemName: "person")
+//        }
+        
+        if defaults.string(forKey: "pfp") == "" || defaults.string(forKey: "pfp") == nil {
+            // Create a reference to the file you want to download
+            let pfpRef = storageRef.child("\(String(describing: uuid))/ProfilePicture.jpg")
+
+            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+            pfpRef.getData(maxSize: 3 * 3072 * 3072) { data, error in
+              if let error = error {
+                print("Download error")
+              } else {
+                  // Data for "images/island.jpg" is returned
+                  let downloadedImage = UIImage(data: data!)
+                  if downloadedImage == nil {
+                      //self.profilePhoto.image = UIImage(systemName: "person")
+                      print("downloadedImage is nil")
+                  }
+                  self.profilePhoto.image = downloadedImage
+                  let imageData = downloadedImage?.jpegData(compressionQuality: 1.0)
+                  var pfpImageData = Data(base64Encoded: imageData!)
+                  self.defaults.set(pfpImageData, forKey: "pfp")
+              }
+            }
+        } else if defaults.string(forKey: "pfp") != nil {
+            var pfpImageData = Data(base64Encoded: (defaults.string(forKey: "pfp")!))
+            self.profilePhoto.image = UIImage(data: pfpImageData!, scale: 1)
         }
+        
+        
+        
         setUpActionSheet()
         profilePhoto.layer.cornerRadius = profilePhoto.bounds.height/2
         profilePhoto.layer.masksToBounds = true
@@ -111,14 +165,14 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
     /*
     // MARK: - viewDidAppear() override
     */
-    
+
     // Make sure language label changes if language
     // Selection changes in the same session
     
     override func viewDidAppear(_ animated: Bool) {
         viewDidLoad()
     }
-    
+
     /*
     // MARK: - Change profile photo
     */
@@ -126,7 +180,7 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func changeProfilePhoto(_ sender: AnyObject) {
         present(captureMediaActionSheet, animated: true, completion: nil)
     }
-    
+ 
     /*
     // MARK: - Logging out
     */
@@ -138,6 +192,7 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
             super.viewDidLoad()
             replaceVC(id: "setupVC")
             defaults.set("Not assigned!", forKey: "language")
+            defaults.set("", forKey: "pfp")
         } catch {
             print("An error occured while signing out")
             super.viewDidLoad()

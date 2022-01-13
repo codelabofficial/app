@@ -7,8 +7,8 @@
 
 import UIKit
 import Firebase
-import SPConfetti
 import AudioToolbox
+import SPConfetti
 
 class homeViewController: UIViewController {
     
@@ -26,6 +26,7 @@ class homeViewController: UIViewController {
     @IBOutlet weak var languageImage: UIImageView!
     @IBOutlet weak var thumbsUpButton: UIButton!
     @IBOutlet weak var thumbsDownButton: UIButton!
+    @IBOutlet weak var feedbackResult: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,6 +47,7 @@ class homeViewController: UIViewController {
         languageImage.image = UIImage(named: language)
         
         welcomeMessage.text = "Welcome back, \(defaults.string(forKey: "firstName")!)"
+         
         
         // Do any additional setup after loading the view.
     }
@@ -53,11 +55,20 @@ class homeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if Auth.auth().currentUser != nil {
             print("Logged in already")
+//            do {
+//                try Auth.auth().signOut()
+//            } catch {
+//                print("Could not sign out")
+//            }
+            
         } else { replaceVC(id: "setupVC") }
         viewDidLoad()
     }
 
     @IBAction func thumbsUpButtonPressed(_ sender: Any) {
+        feedbackResult.text = "That's great to hear!"
+        feedbackResult.textColor = .green
+        feedbackResult.isHidden = false
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
         thumbsUpButton.tintColor = .green
@@ -66,14 +77,23 @@ class homeViewController: UIViewController {
             thumbsUpButton.tintColor = .systemBlue
             SPConfetti.stopAnimating()
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+            feedbackResult.isHidden = true
+        }
     }
     
     @IBAction func thumbsDownButtonPressed(_ sender: Any) {
+        feedbackResult.text = "That's not so good. You can always get in touch with feedback if you want to."
+        feedbackResult.textColor = .red
+        feedbackResult.isHidden = false
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.error)
         thumbsDownButton.tintColor = .red
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
             thumbsDownButton.tintColor = .systemBlue
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+            feedbackResult.isHidden = true
         }
     }
     /*

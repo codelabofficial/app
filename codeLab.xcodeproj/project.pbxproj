@@ -7,12 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0683FC623293DBB8668110FC /* Pods_codeLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318E01DF278C1D8F0011BC87 /* Pods_codeLab.framework */; };
 		310876072787793300D715EF /* coursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310876062787793300D715EF /* coursesTableViewCell.swift */; };
 		3112C79D2780463400E6CD54 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3112C79C2780463400E6CD54 /* homeViewController.swift */; };
 		3112C79F2780465700E6CD54 /* lessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3112C79E2780465700E6CD54 /* lessonViewController.swift */; };
-		3112C7A12780466A00E6CD54 /* compilerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3112C7A02780466A00E6CD54 /* compilerViewController.swift */; };
 		3112C7A7278046E300E6CD54 /* coursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3112C7A6278046E300E6CD54 /* coursesViewController.swift */; };
 		3112C7A9278046EF00E6CD54 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3112C7A8278046EF00E6CD54 /* profileViewController.swift */; };
+		3137F8922790C8F100455AE3 /* FileTypeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0872790C7E1007DA3BA /* FileTypeSelectViewController.swift */; };
+		3137F8932790C8F100455AE3 /* SyntaxThemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0892790C7E1007DA3BA /* SyntaxThemeTableViewController.swift */; };
+		3137F8942790C8F100455AE3 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA08A2790C7E1007DA3BA /* DocumentViewController.swift */; };
+		3137F8962790C8F100455AE3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA08C2790C7E1007DA3BA /* SettingsViewController.swift */; };
+		3137F8982790C9D000455AE3 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137F8972790C9D000455AE3 /* BrowserViewController.swift */; };
+		3137F8992790CC5E00455AE3 /* css.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA07B2790BEC4007DA3BA /* css.swift */; };
+		3137F89A2790CC5E00455AE3 /* swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA07C2790BEC4007DA3BA /* swift.swift */; };
+		3137F89B2790CC5E00455AE3 /* html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA07D2790BEC4007DA3BA /* html.swift */; };
+		3137F89C2790CC5E00455AE3 /* py.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA07E2790BEC4007DA3BA /* py.swift */; };
+		3137F89D2790CC5E00455AE3 /* c.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA07F2790BEC4007DA3BA /* c.swift */; };
+		3137F89E2790CC6300455AE3 /* one_light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0732790BEC2007DA3BA /* one_light.swift */; };
+		3137F89F2790CC6300455AE3 /* one_dark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0742790BEC2007DA3BA /* one_dark.swift */; };
+		3137F8A02790CC6300455AE3 /* solarized_dark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0752790BEC2007DA3BA /* solarized_dark.swift */; };
+		3137F8A12790CC6300455AE3 /* spacemacs_light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0762790BEC2007DA3BA /* spacemacs_light.swift */; };
+		3137F8A22790CC6300455AE3 /* basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0772790BEC2007DA3BA /* basic.swift */; };
+		3137F8A32790CC6300455AE3 /* spacemacs_dark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0782790BEC2007DA3BA /* spacemacs_dark.swift */; };
+		3137F8A42790CC6300455AE3 /* solarized_light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0792790BEC2007DA3BA /* solarized_light.swift */; };
+		318E01E0278C1D950011BC87 /* Pods_codeLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A059BAD6AE5021158E3FE8C8 /* Pods_codeLab.framework */; };
 		31905328277FD63100115013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31905327277FD63100115013 /* AppDelegate.swift */; };
 		3190532A277FD63100115013 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31905329277FD63100115013 /* SceneDelegate.swift */; };
 		3190532C277FD63100115013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3190532B277FD63100115013 /* ViewController.swift */; };
@@ -20,21 +38,34 @@
 		31905331277FD63200115013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31905330277FD63200115013 /* Assets.xcassets */; };
 		31905334277FD63200115013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31905332277FD63200115013 /* LaunchScreen.storyboard */; };
 		3193D9EC27824C550058001C /* setupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193D9EB27824C550058001C /* setupViewController.swift */; };
-		319F679C278078800000E017 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 319F679B278078800000E017 /* GoogleService-Info.plist */; };
+		319BA0462790B585007DA3BA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0452790B585007DA3BA /* Settings.swift */; };
+		319BA04C2790B7A6007DA3BA /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA04B2790B7A6007DA3BA /* UIFont+Extension.swift */; };
+		319BA04E2790B7E8007DA3BA /* Notification.Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA04D2790B7E8007DA3BA /* Notification.Name+Extension.swift */; };
+		319BA0522790B845007DA3BA /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0512790B845007DA3BA /* UITableView+Extension.swift */; };
+		319BA0552790B893007DA3BA /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0542790B893007DA3BA /* NSMutableAttributedString+Extension.swift */; };
+		319BA0572790B8BD007DA3BA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0562790B8BD007DA3BA /* String+Extension.swift */; };
+		319BA0592790B8F6007DA3BA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0582790B8F6007DA3BA /* UIColor+Extension.swift */; };
+		319BA05B2790B91E007DA3BA /* TextDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA05A2790B91E007DA3BA /* TextDocument.swift */; };
+		319BA05D2790B92F007DA3BA /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA05C2790B92F007DA3BA /* FileType.swift */; };
+		319BA05F2790B997007DA3BA /* CodeHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA05E2790B997007DA3BA /* CodeHighlighter.swift */; };
+		319BA0612790B9CB007DA3BA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0602790B9CB007DA3BA /* Token.swift */; };
+		319BA0632790BE40007DA3BA /* TokenLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0622790BE40007DA3BA /* TokenLibrary.swift */; };
+		319BA06C2790BE9F007DA3BA /* SyntaxTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA06B2790BE9F007DA3BA /* SyntaxTheme.swift */; };
+		319BA06D2790BE9F007DA3BA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA06A2790BE9D007DA3BA /* Color.swift */; };
 		31A4AC1927889D95009E4DA4 /* quizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4AC1827889D95009E4DA4 /* quizViewController.swift */; };
 		31D3BBD6278370D50058FE29 /* circularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D3BBD5278370D50058FE29 /* circularImage.swift */; };
-		779855551708DA06237A602B /* Pods_codeLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A059BAD6AE5021158E3FE8C8 /* Pods_codeLab.framework */; };
-		DCA4FA6B1B340D9046D6302C /* Pods_codeLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3B9EB353D30B86161A7EF7 /* Pods_codeLab.framework */; };
+		31DA662F278DFF9A003DE7F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31DA662E278DFF9A003DE7F9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		310876062787793300D715EF /* coursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coursesTableViewCell.swift; sourceTree = "<group>"; };
-		31112469278855640062850A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3112C79C2780463400E6CD54 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		3112C79E2780465700E6CD54 /* lessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lessonViewController.swift; sourceTree = "<group>"; };
-		3112C7A02780466A00E6CD54 /* compilerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = compilerViewController.swift; sourceTree = "<group>"; };
 		3112C7A6278046E300E6CD54 /* coursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coursesViewController.swift; sourceTree = "<group>"; };
 		3112C7A8278046EF00E6CD54 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		3137F8972790C9D000455AE3 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BrowserViewController.swift; path = codeLab/ViewControllers/BrowserViewController.swift; sourceTree = SOURCE_ROOT; };
+		318E01DE278C1D800011BC87 /* Pods_codeLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_codeLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		318E01DF278C1D8F0011BC87 /* Pods_codeLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_codeLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31905324277FD63100115013 /* codeLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = codeLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31905327277FD63100115013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31905329277FD63100115013 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,9 +75,39 @@
 		31905333277FD63200115013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31905335277FD63200115013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3193D9EB27824C550058001C /* setupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupViewController.swift; sourceTree = "<group>"; };
-		319F679B278078800000E017 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		319BA0452790B585007DA3BA /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		319BA04B2790B7A6007DA3BA /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		319BA04D2790B7E8007DA3BA /* Notification.Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Extension.swift"; sourceTree = "<group>"; };
+		319BA0512790B845007DA3BA /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		319BA0542790B893007DA3BA /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSMutableAttributedString+Extension.swift"; path = "/Users/alfie/Documents/codeLab/Extensions/NSMutableAttributedString+Extension.swift"; sourceTree = "<absolute>"; };
+		319BA0562790B8BD007DA3BA /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		319BA0582790B8F6007DA3BA /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		319BA05A2790B91E007DA3BA /* TextDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDocument.swift; sourceTree = "<group>"; };
+		319BA05C2790B92F007DA3BA /* FileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileType.swift; sourceTree = "<group>"; };
+		319BA05E2790B997007DA3BA /* CodeHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeHighlighter.swift; sourceTree = "<group>"; };
+		319BA0602790B9CB007DA3BA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		319BA0622790BE40007DA3BA /* TokenLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenLibrary.swift; sourceTree = "<group>"; };
+		319BA06A2790BE9D007DA3BA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		319BA06B2790BE9F007DA3BA /* SyntaxTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxTheme.swift; sourceTree = "<group>"; };
+		319BA0732790BEC2007DA3BA /* one_light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = one_light.swift; sourceTree = "<group>"; };
+		319BA0742790BEC2007DA3BA /* one_dark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = one_dark.swift; sourceTree = "<group>"; };
+		319BA0752790BEC2007DA3BA /* solarized_dark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = solarized_dark.swift; sourceTree = "<group>"; };
+		319BA0762790BEC2007DA3BA /* spacemacs_light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spacemacs_light.swift; sourceTree = "<group>"; };
+		319BA0772790BEC2007DA3BA /* basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basic.swift; sourceTree = "<group>"; };
+		319BA0782790BEC2007DA3BA /* spacemacs_dark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spacemacs_dark.swift; sourceTree = "<group>"; };
+		319BA0792790BEC2007DA3BA /* solarized_light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = solarized_light.swift; sourceTree = "<group>"; };
+		319BA07B2790BEC4007DA3BA /* css.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = css.swift; sourceTree = "<group>"; };
+		319BA07C2790BEC4007DA3BA /* swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift.swift; sourceTree = "<group>"; };
+		319BA07D2790BEC4007DA3BA /* html.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = html.swift; sourceTree = "<group>"; };
+		319BA07E2790BEC4007DA3BA /* py.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = py.swift; sourceTree = "<group>"; };
+		319BA07F2790BEC4007DA3BA /* c.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = c.swift; sourceTree = "<group>"; };
+		319BA0872790C7E1007DA3BA /* FileTypeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTypeSelectViewController.swift; sourceTree = "<group>"; };
+		319BA0892790C7E1007DA3BA /* SyntaxThemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxThemeTableViewController.swift; sourceTree = "<group>"; };
+		319BA08A2790C7E1007DA3BA /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
+		319BA08C2790C7E1007DA3BA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		31A4AC1827889D95009E4DA4 /* quizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizViewController.swift; sourceTree = "<group>"; };
 		31D3BBD5278370D50058FE29 /* circularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = circularImage.swift; path = /Users/alfie/Documents/codeLab/codeLab/circularImage.swift; sourceTree = "<absolute>"; };
+		31DA662E278DFF9A003DE7F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A3B9EB353D30B86161A7EF7 /* Pods_codeLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_codeLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		578B71EBE51DD0D5BC1DEFE2 /* Pods-codeLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codeLab.release.xcconfig"; path = "Target Support Files/Pods-codeLab/Pods-codeLab.release.xcconfig"; sourceTree = "<group>"; };
 		68C7F227B3192152C2001DEC /* Pods-codeLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codeLab.debug.xcconfig"; path = "Target Support Files/Pods-codeLab/Pods-codeLab.debug.xcconfig"; sourceTree = "<group>"; };
@@ -58,8 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCA4FA6B1B340D9046D6302C /* Pods_codeLab.framework in Frameworks */,
-				779855551708DA06237A602B /* Pods_codeLab.framework in Frameworks */,
+				318E01E0278C1D950011BC87 /* Pods_codeLab.framework in Frameworks */,
+				0683FC623293DBB8668110FC /* Pods_codeLab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +130,8 @@
 		1E2BEC3168D5F55EEF90A41A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				318E01DF278C1D8F0011BC87 /* Pods_codeLab.framework */,
+				318E01DE278C1D800011BC87 /* Pods_codeLab.framework */,
 				A059BAD6AE5021158E3FE8C8 /* Pods_codeLab.framework */,
 			);
 			name = Frameworks;
@@ -96,10 +159,8 @@
 		31112464278854AE0062850A /* Compiler View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3112C7A02780466A00E6CD54 /* compilerViewController.swift */,
 			);
 			name = "Compiler View Controller";
-			path = ..;
 			sourceTree = "<group>";
 		};
 		31112465278854C60062850A /* Profile View Controller + Setup */ = {
@@ -142,31 +203,135 @@
 		31905326277FD63100115013 /* codeLab */ = {
 			isa = PBXGroup;
 			children = (
-				31905335277FD63200115013 /* Info.plist */,
-				31112469278855640062850A /* GoogleService-Info.plist */,
+				319BA0862790C7E1007DA3BA /* ViewControllers */,
+				319BA0442790B56B007DA3BA /* Editor */,
+				31DA6631278DFFED003DE7F9 /* Courses */,
 				31A4AC1A27889D9F009E4DA4 /* Quiz View Controller */,
 				31112467278855160062850A /* Lesson View Controller */,
 				31112465278854C60062850A /* Profile View Controller + Setup */,
-				31112464278854AE0062850A /* Compiler View Controller */,
 				311124632788548D0062850A /* Home View Controller */,
 				31112462278854620062850A /* Courses View Controller */,
+				31DA662E278DFF9A003DE7F9 /* GoogleService-Info.plist */,
+				31905335277FD63200115013 /* Info.plist */,
 				31905329277FD63100115013 /* SceneDelegate.swift */,
 				3190532B277FD63100115013 /* ViewController.swift */,
 				31905327277FD63100115013 /* AppDelegate.swift */,
 				3190532D277FD63100115013 /* Main.storyboard */,
-				31905330277FD63200115013 /* Assets.xcassets */,
 				31905332277FD63200115013 /* LaunchScreen.storyboard */,
-				319F679B278078800000E017 /* GoogleService-Info.plist */,
+				31905330277FD63200115013 /* Assets.xcassets */,
 			);
 			path = codeLab;
+			sourceTree = "<group>";
+		};
+		319BA0442790B56B007DA3BA /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				319BA0452790B585007DA3BA /* Settings.swift */,
+				319BA0472790B607007DA3BA /* Documents */,
+				319BA04A2790B683007DA3BA /* Extensions */,
+				319BA0492790B62C007DA3BA /* CodeHighlight */,
+			);
+			name = Editor;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		319BA0472790B607007DA3BA /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				319BA05A2790B91E007DA3BA /* TextDocument.swift */,
+				319BA05C2790B92F007DA3BA /* FileType.swift */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		319BA0492790B62C007DA3BA /* CodeHighlight */ = {
+			isa = PBXGroup;
+			children = (
+				319BA05E2790B997007DA3BA /* CodeHighlighter.swift */,
+				319BA0602790B9CB007DA3BA /* Token.swift */,
+				319BA0622790BE40007DA3BA /* TokenLibrary.swift */,
+				319BA06A2790BE9D007DA3BA /* Color.swift */,
+				319BA06B2790BE9F007DA3BA /* SyntaxTheme.swift */,
+				319BA07A2790BEC4007DA3BA /* LanguageLibraries */,
+				319BA0722790BEC2007DA3BA /* SyntaxThemes */,
+			);
+			path = CodeHighlight;
+			sourceTree = "<group>";
+		};
+		319BA04A2790B683007DA3BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				319BA04B2790B7A6007DA3BA /* UIFont+Extension.swift */,
+				319BA04D2790B7E8007DA3BA /* Notification.Name+Extension.swift */,
+				319BA0512790B845007DA3BA /* UITableView+Extension.swift */,
+				319BA0542790B893007DA3BA /* NSMutableAttributedString+Extension.swift */,
+				319BA0562790B8BD007DA3BA /* String+Extension.swift */,
+				319BA0582790B8F6007DA3BA /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		319BA0722790BEC2007DA3BA /* SyntaxThemes */ = {
+			isa = PBXGroup;
+			children = (
+				319BA0732790BEC2007DA3BA /* one_light.swift */,
+				319BA0742790BEC2007DA3BA /* one_dark.swift */,
+				319BA0752790BEC2007DA3BA /* solarized_dark.swift */,
+				319BA0762790BEC2007DA3BA /* spacemacs_light.swift */,
+				319BA0772790BEC2007DA3BA /* basic.swift */,
+				319BA0782790BEC2007DA3BA /* spacemacs_dark.swift */,
+				319BA0792790BEC2007DA3BA /* solarized_light.swift */,
+			);
+			path = SyntaxThemes;
+			sourceTree = "<group>";
+		};
+		319BA07A2790BEC4007DA3BA /* LanguageLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				319BA07B2790BEC4007DA3BA /* css.swift */,
+				319BA07C2790BEC4007DA3BA /* swift.swift */,
+				319BA07D2790BEC4007DA3BA /* html.swift */,
+				319BA07E2790BEC4007DA3BA /* py.swift */,
+				319BA07F2790BEC4007DA3BA /* c.swift */,
+			);
+			path = LanguageLibraries;
+			sourceTree = "<group>";
+		};
+		319BA0862790C7E1007DA3BA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3137F8972790C9D000455AE3 /* BrowserViewController.swift */,
+				319BA0872790C7E1007DA3BA /* FileTypeSelectViewController.swift */,
+				319BA0892790C7E1007DA3BA /* SyntaxThemeTableViewController.swift */,
+				319BA08A2790C7E1007DA3BA /* DocumentViewController.swift */,
+				319BA08C2790C7E1007DA3BA /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		31A4AC1A27889D9F009E4DA4 /* Quiz View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				31112464278854AE0062850A /* Compiler View Controller */,
 				31A4AC1827889D95009E4DA4 /* quizViewController.swift */,
 			);
 			name = "Quiz View Controller";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		31DA6630278DFFED003DE7F9 /* Python */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Python;
+			sourceTree = "<group>";
+		};
+		31DA6631278DFFED003DE7F9 /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				31DA6630278DFFED003DE7F9 /* Python */,
+			);
+			name = Courses;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -250,7 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31905334277FD63200115013 /* LaunchScreen.storyboard in Resources */,
-				319F679C278078800000E017 /* GoogleService-Info.plist in Resources */,
+				31DA662F278DFF9A003DE7F9 /* GoogleService-Info.plist in Resources */,
 				31905331277FD63200115013 /* Assets.xcassets in Resources */,
 				3190532F277FD63100115013 /* Main.storyboard in Resources */,
 			);
@@ -305,16 +470,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3137F89E2790CC6300455AE3 /* one_light.swift in Sources */,
+				3137F89F2790CC6300455AE3 /* one_dark.swift in Sources */,
+				3137F8A02790CC6300455AE3 /* solarized_dark.swift in Sources */,
+				3137F8A12790CC6300455AE3 /* spacemacs_light.swift in Sources */,
+				3137F8A22790CC6300455AE3 /* basic.swift in Sources */,
+				3137F8A32790CC6300455AE3 /* spacemacs_dark.swift in Sources */,
+				3137F8A42790CC6300455AE3 /* solarized_light.swift in Sources */,
+				3137F8992790CC5E00455AE3 /* css.swift in Sources */,
+				3137F89A2790CC5E00455AE3 /* swift.swift in Sources */,
+				3137F89B2790CC5E00455AE3 /* html.swift in Sources */,
+				3137F89C2790CC5E00455AE3 /* py.swift in Sources */,
+				3137F89D2790CC5E00455AE3 /* c.swift in Sources */,
+				3137F8922790C8F100455AE3 /* FileTypeSelectViewController.swift in Sources */,
+				3137F8982790C9D000455AE3 /* BrowserViewController.swift in Sources */,
+				3137F8932790C8F100455AE3 /* SyntaxThemeTableViewController.swift in Sources */,
+				3137F8942790C8F100455AE3 /* DocumentViewController.swift in Sources */,
+				3137F8962790C8F100455AE3 /* SettingsViewController.swift in Sources */,
 				31A4AC1927889D95009E4DA4 /* quizViewController.swift in Sources */,
+				319BA05B2790B91E007DA3BA /* TextDocument.swift in Sources */,
 				3190532C277FD63100115013 /* ViewController.swift in Sources */,
-				3112C7A12780466A00E6CD54 /* compilerViewController.swift in Sources */,
+				319BA0522790B845007DA3BA /* UITableView+Extension.swift in Sources */,
+				319BA0592790B8F6007DA3BA /* UIColor+Extension.swift in Sources */,
 				31905328277FD63100115013 /* AppDelegate.swift in Sources */,
 				310876072787793300D715EF /* coursesTableViewCell.swift in Sources */,
+				319BA0632790BE40007DA3BA /* TokenLibrary.swift in Sources */,
+				319BA0612790B9CB007DA3BA /* Token.swift in Sources */,
+				319BA05D2790B92F007DA3BA /* FileType.swift in Sources */,
 				3190532A277FD63100115013 /* SceneDelegate.swift in Sources */,
+				319BA0552790B893007DA3BA /* NSMutableAttributedString+Extension.swift in Sources */,
 				3112C79D2780463400E6CD54 /* homeViewController.swift in Sources */,
+				319BA0572790B8BD007DA3BA /* String+Extension.swift in Sources */,
+				319BA0462790B585007DA3BA /* Settings.swift in Sources */,
 				3112C79F2780465700E6CD54 /* lessonViewController.swift in Sources */,
+				319BA06C2790BE9F007DA3BA /* SyntaxTheme.swift in Sources */,
+				319BA06D2790BE9F007DA3BA /* Color.swift in Sources */,
+				319BA04E2790B7E8007DA3BA /* Notification.Name+Extension.swift in Sources */,
+				319BA05F2790B997007DA3BA /* CodeHighlighter.swift in Sources */,
 				31D3BBD6278370D50058FE29 /* circularImage.swift in Sources */,
 				3193D9EC27824C550058001C /* setupViewController.swift in Sources */,
+				319BA04C2790B7A6007DA3BA /* UIFont+Extension.swift in Sources */,
 				3112C7A9278046EF00E6CD54 /* profileViewController.swift in Sources */,
 				3112C7A7278046E300E6CD54 /* coursesViewController.swift in Sources */,
 			);
@@ -464,12 +659,44 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 76V43E9CWT;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BoringSSL-GRPC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreDiagnostics\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RSKImageCropper\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/abseil\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-Core\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current\"",
+					"\"${PODS_ROOT}/GoogleAppMeasurement/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleUserMessagingPlatform/Frameworks/Release\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FirebaseAnalytics/AdIdSupport\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/Google-Mobile-Ads-SDK\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAppMeasurement/AdIdSupport\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAppMeasurement/WithoutAdIdSupport\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleUserMessagingPlatform\"",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = codeLab/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Used to take a photo to use as your profile photo.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Used to change profile photo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -482,6 +709,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alfie.codeLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -495,12 +724,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 76V43E9CWT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = codeLab/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Used to take a photo to use as your profile photo.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Used to change profile photo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -513,6 +746,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alfie.codeLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

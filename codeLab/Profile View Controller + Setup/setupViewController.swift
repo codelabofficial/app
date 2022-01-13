@@ -121,7 +121,7 @@ class setupViewController: UIViewController {
             var defaultImage = UIImage(systemName: "person")
             var defaultImageData = defaultImage?.jpegData(compressionQuality: 1)
             var defaultImageDataBase64 = defaultImageData?.base64EncodedString()
-            self?.defaults.set(defaultImageDataBase64, forKey: "pfp")
+            //self?.defaults.set(defaultImageDataBase64, forKey: "pfp")
         })
     }
     
@@ -152,7 +152,7 @@ class setupViewController: UIViewController {
                 var defaultImage = UIImage(systemName: "person")
                 var defaultImageData = defaultImage?.jpegData(compressionQuality: 1)
                 var defaultImageDataBase64 = defaultImageData?.base64EncodedString()
-                self?.defaults.set(defaultImageDataBase64, forKey: "pfp")
+                //self?.defaults.set(defaultImageDataBase64, forKey: "pfp")
                 
             })
         }))
