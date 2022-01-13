@@ -103,6 +103,8 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [Swift](https://swift.org/)
 * [Xcode](https://developer.apple.com/xcode/)
 * [Firebase](https://firebase.google.com/)
+* [RSKImageCropper](https://github.com/ruslanskorb/RSKImageCropper)
+* [SPConfetti](https://github.com/ivanvorobei/SPConfetti)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -123,9 +125,10 @@ You do not need to install any dependencies as of now, will need to open the `co
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Setup your Firebase app with authentication at [https://firebase.google.com](https://firebase.google.com)
-2. Make sure you are using `codeLab.xcworkspace`
-3. Edit the `info.plist` file and add your App ID at GADApplicationIdentifier
-4. Build the project
+2. Replace the `GoogleService-Info.plist` with the one generated when setting up your Firebase app
+3. Make sure you are using `codeLab.xcworkspace`
+4. Edit the `Info.plist` file and add your App ID at GADApplicationIdentifier
+5. Build the project
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -133,7 +136,7 @@ _Below is an example of how you can instruct your audience on installing and set
 ## Roadmap
 
 - [x] Add Firebase login
-- [x] Add relevant sections
+- [x] Add relevant tabs in tab bar
 - [x] Add "which language should I learn" quiz
 - [x] Add course selection
 - [ ] Add advert support
