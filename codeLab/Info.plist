@@ -176,7 +176,7 @@
 	<key>FirebaseAutomaticScreenReportingEnabled</key>
 	<false/>
 	<key>GADApplicationIdentifier</key>
-	<string>YOUR-GADAPPLICATIONIDENTIFIER</string>
+	<string>ca-app-pub-4800768255188443~3105556822</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -334,6 +334,8 @@
 	<array>
 		<dict/>
 	</array>
+	<key>UIApplicationSupportsPrintCommand</key>
+	<true/>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

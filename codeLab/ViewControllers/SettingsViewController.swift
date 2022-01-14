@@ -29,22 +29,24 @@ class SettingsViewController: UITableViewController {
 		//self.dismiss(animated: true, completion: nil)
         //replaceVC(id: "browserVC")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DocumentViewController")
-        vc.modalPresentationStyle = .overFullScreen
+        let vc = storyboard.instantiateViewController(withIdentifier: "browserVC")
+        vc.navigationController?.modalPresentationStyle = .overFullScreen
         present(vc, animated: true)
 	}
 
 	@IBAction func fontSizeSliderChanged(_ sender: UISlider) {
-//		let size = Int(sender.value)
-//		Settings.fontSize = CGFloat(size)
-//
-//		self.updateCells()
+		let size = Int(sender.value)
+		Settings.fontSize = CGFloat(size)
+
+		self.updateCells()
 	}
 
 	// MARK: ViewController lifecycle
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        CodeHighlighter.init(fileExtension: "py", themeName: "one_light")
 
 		self.fontSizeSlider.value = Float(Settings.fontSize)
 		switchCaseSensitive.setOn(Settings.caseSensitiveTextSearching, animated: true)

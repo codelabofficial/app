@@ -77,7 +77,7 @@ class homeViewController: UIViewController {
             thumbsUpButton.tintColor = .systemBlue
             SPConfetti.stopAnimating()
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
             feedbackResult.isHidden = true
         }
     }
@@ -92,7 +92,7 @@ class homeViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
             thumbsDownButton.tintColor = .systemBlue
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
             feedbackResult.isHidden = true
         }
     }

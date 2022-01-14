@@ -33,6 +33,13 @@ class BrowserViewController: UIDocumentBrowserViewController, UIDocumentBrowserV
         updateInterfaceStyle()
     }
 
+    func replaceVC(id: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: id)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
+    }
+
     // MARK: Actions
     
     @objc private func updateInterfaceStyle() {
@@ -62,9 +69,12 @@ class BrowserViewController: UIDocumentBrowserViewController, UIDocumentBrowserV
                 identifier: "FileTypesVC") as? FileTypeTableViewController
         else {
             importHandler(nil, .none)
+            print("File type vc returned nil")
             return
         }
+//        let fileTypeVC = storyboard.instantiateViewController(withIdentifier: "FileTypesVC") as? FileTypeTableViewController
         self.present(fileTypeVC, animated: true)
+        //replaceVC(id: "FileTypesVC")
         fileTypeVC.didSelectFileType { (fileType) in
             let url: URL?
 

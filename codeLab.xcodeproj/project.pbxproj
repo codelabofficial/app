@@ -30,6 +30,7 @@
 		3137F8A22790CC6300455AE3 /* basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0772790BEC2007DA3BA /* basic.swift */; };
 		3137F8A32790CC6300455AE3 /* spacemacs_dark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0782790BEC2007DA3BA /* spacemacs_dark.swift */; };
 		3137F8A42790CC6300455AE3 /* solarized_light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0792790BEC2007DA3BA /* solarized_light.swift */; };
+		314672F02790E05A007D50EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 314672EF2790E05A007D50EF /* GoogleService-Info.plist */; };
 		318E01E0278C1D950011BC87 /* Pods_codeLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A059BAD6AE5021158E3FE8C8 /* Pods_codeLab.framework */; };
 		31905328277FD63100115013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31905327277FD63100115013 /* AppDelegate.swift */; };
 		3190532A277FD63100115013 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31905329277FD63100115013 /* SceneDelegate.swift */; };
@@ -54,7 +55,6 @@
 		319BA06D2790BE9F007DA3BA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA06A2790BE9D007DA3BA /* Color.swift */; };
 		31A4AC1927889D95009E4DA4 /* quizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4AC1827889D95009E4DA4 /* quizViewController.swift */; };
 		31D3BBD6278370D50058FE29 /* circularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D3BBD5278370D50058FE29 /* circularImage.swift */; };
-		31DA662F278DFF9A003DE7F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31DA662E278DFF9A003DE7F9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +64,7 @@
 		3112C7A6278046E300E6CD54 /* coursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coursesViewController.swift; sourceTree = "<group>"; };
 		3112C7A8278046EF00E6CD54 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		3137F8972790C9D000455AE3 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BrowserViewController.swift; path = codeLab/ViewControllers/BrowserViewController.swift; sourceTree = SOURCE_ROOT; };
+		314672EF2790E05A007D50EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		318E01DE278C1D800011BC87 /* Pods_codeLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_codeLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		318E01DF278C1D8F0011BC87 /* Pods_codeLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_codeLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31905324277FD63100115013 /* codeLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = codeLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +108,6 @@
 		319BA08C2790C7E1007DA3BA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		31A4AC1827889D95009E4DA4 /* quizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizViewController.swift; sourceTree = "<group>"; };
 		31D3BBD5278370D50058FE29 /* circularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = circularImage.swift; path = /Users/alfie/Documents/codeLab/codeLab/circularImage.swift; sourceTree = "<absolute>"; };
-		31DA662E278DFF9A003DE7F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A3B9EB353D30B86161A7EF7 /* Pods_codeLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_codeLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		578B71EBE51DD0D5BC1DEFE2 /* Pods-codeLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codeLab.release.xcconfig"; path = "Target Support Files/Pods-codeLab/Pods-codeLab.release.xcconfig"; sourceTree = "<group>"; };
 		68C7F227B3192152C2001DEC /* Pods-codeLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codeLab.debug.xcconfig"; path = "Target Support Files/Pods-codeLab/Pods-codeLab.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,8 +211,8 @@
 				31112465278854C60062850A /* Profile View Controller + Setup */,
 				311124632788548D0062850A /* Home View Controller */,
 				31112462278854620062850A /* Courses View Controller */,
-				31DA662E278DFF9A003DE7F9 /* GoogleService-Info.plist */,
 				31905335277FD63200115013 /* Info.plist */,
+				314672EF2790E05A007D50EF /* GoogleService-Info.plist */,
 				31905329277FD63100115013 /* SceneDelegate.swift */,
 				3190532B277FD63100115013 /* ViewController.swift */,
 				31905327277FD63100115013 /* AppDelegate.swift */,
@@ -415,7 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31905334277FD63200115013 /* LaunchScreen.storyboard in Resources */,
-				31DA662F278DFF9A003DE7F9 /* GoogleService-Info.plist in Resources */,
+				314672F02790E05A007D50EF /* GoogleService-Info.plist in Resources */,
 				31905331277FD63200115013 /* Assets.xcassets in Resources */,
 				3190532F277FD63100115013 /* Main.storyboard in Resources */,
 			);

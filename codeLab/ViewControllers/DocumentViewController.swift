@@ -20,7 +20,6 @@ class DocumentViewController: UIViewController, UITextViewDelegate, UIPointerInt
     @IBOutlet var btResignKeyboard: UIButton!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var searchField: UITextField!
-    @IBOutlet var seperatorView: UIView!
     
     private var searchBarIsShown = false
 
@@ -71,6 +70,9 @@ class DocumentViewController: UIViewController, UITextViewDelegate, UIPointerInt
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        documentTextView.autocorrectionType = .no
+        documentTextView.autocapitalizationType = .none
 
 		// Cursor support
 		if #available(iOS 13.4, *) {
@@ -83,7 +85,7 @@ class DocumentViewController: UIViewController, UITextViewDelegate, UIPointerInt
         document?.open(completionHandler: { [self] (success) in
 			if success {
 				// Display the content of the document, e.g.:
-				self.nameLabel.text = self.document?.fileURL.lastPathComponent
+				//self.nameLabel.text = self.document?.fileURL.lastPathComponent
                 
                 
 				let text = self.document?.userText
@@ -92,7 +94,6 @@ class DocumentViewController: UIViewController, UITextViewDelegate, UIPointerInt
                 documentTextView.backgroundColor = Settings.syntaxTheme.backgroundColor.uiColor
                 documentTextView.font = Settings.fontStyle.uiFont
                 documentTextView.textColor = Settings.syntaxTheme.textColor.uiColor
-                seperatorView.backgroundColor = Settings.syntaxTheme.textColor.uiColor
                 titleBarView.backgroundColor = Settings.syntaxTheme.backgroundColor.uiColor
                 
                 if shouldSyntaxHighlight {
@@ -111,6 +112,13 @@ class DocumentViewController: UIViewController, UITextViewDelegate, UIPointerInt
         
         updateInterfaceStyle()
 	}
+    
+    func replaceVC(id: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: id)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
+    }
 
 	// MARK: Actions
 
@@ -123,9 +131,7 @@ class DocumentViewController: UIViewController, UITextViewDelegate, UIPointerInt
 
 	@IBAction @objc func dismissDocumentViewController() {
 		self.saveFile()
-		dismiss(animated: true) {
-			self.document?.close(completionHandler: nil)
-		}
+		replaceVC(id: "tabBarVC")
 	}
 
 	@objc @IBAction func resignKeyboardTouchUpInside(_ sender: UIButton) {
@@ -220,7 +226,7 @@ class DocumentViewController: UIViewController, UITextViewDelegate, UIPointerInt
 				completionHandler: { (success: Bool) -> Void in
 
 					if !success {
-						print("Unable to saving document")
+						print("Unable to save document")
 					}
 
 				})
@@ -257,7 +263,7 @@ class DocumentViewController: UIViewController, UITextViewDelegate, UIPointerInt
 		self.resetTextAttribute()
 		let attributedText = NSMutableAttributedString(
 			attributedString: self.documentTextView.attributedText)
-//        attributedText.highlight(pattern: self.searchField.text ?? "", caseSensitive: Settings.caseSensitiveTextSearching)
+        //attributedText.highlight(pattern: self.searchField.text ?? "", caseSensitive: Settings.caseSensitiveTextSearching)
 
 		self.documentTextView.attributedText = attributedText
 	}
