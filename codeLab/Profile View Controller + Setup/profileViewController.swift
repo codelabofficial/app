@@ -52,6 +52,21 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imageCropViewController(_ controller: RSKImageCropViewController, didCropImage croppedImage: UIImage, usingCropRect cropRect: CGRect, rotationAngle: CGFloat) {
         profilePhoto.image = croppedImage
+        let snapshot: UIImage = croppedImage
+
+        PHPhotoLibrary.shared().performChanges({
+            PHAssetChangeRequest.creationRequestForAsset(from: snapshot)
+        }, completionHandler: { success, error in
+            if success {
+                print("Saved profile photo")
+            }
+            else if let error = error {
+                print("Error saving profile photo")
+            }
+            else {
+                print("Saving profile photo failed with no error")
+            }
+        })
         
         let uuid = (Auth.auth().currentUser?.uid)!
         
@@ -75,6 +90,10 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
         dismiss(animated: true, completion: nil)
     }
     
+    /*
+    // MARK: - Image Picker Controller
+    */
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         self.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         self.imagePicker.dismiss(animated: false, completion: {})
@@ -82,6 +101,10 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
         imageCropVC.delegate = self;
         self.present(imageCropVC, animated: true, completion: nil)
     }
+    
+    /*
+    // MARK: - Setup action sheet
+    */
     
     func setUpActionSheet() {
             captureMediaActionSheet = UIAlertController(title: "Choose Media", message: "", preferredStyle: .actionSheet)

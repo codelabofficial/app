@@ -30,7 +30,7 @@
 		3137F8A22790CC6300455AE3 /* basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0772790BEC2007DA3BA /* basic.swift */; };
 		3137F8A32790CC6300455AE3 /* spacemacs_dark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0782790BEC2007DA3BA /* spacemacs_dark.swift */; };
 		3137F8A42790CC6300455AE3 /* solarized_light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319BA0792790BEC2007DA3BA /* solarized_light.swift */; };
-		314672F02790E05A007D50EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 314672EF2790E05A007D50EF /* GoogleService-Info.plist */; };
+		313EB1F027921F1300714FA9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 314672EF2790E05A007D50EF /* GoogleService-Info.plist */; };
 		318E01E0278C1D950011BC87 /* Pods_codeLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A059BAD6AE5021158E3FE8C8 /* Pods_codeLab.framework */; };
 		31905328277FD63100115013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31905327277FD63100115013 /* AppDelegate.swift */; };
 		3190532A277FD63100115013 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31905329277FD63100115013 /* SceneDelegate.swift */; };
@@ -414,8 +414,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				313EB1F027921F1300714FA9 /* GoogleService-Info.plist in Resources */,
 				31905334277FD63200115013 /* LaunchScreen.storyboard in Resources */,
-				314672F02790E05A007D50EF /* GoogleService-Info.plist in Resources */,
 				31905331277FD63200115013 /* Assets.xcassets in Resources */,
 				3190532F277FD63100115013 /* Main.storyboard in Resources */,
 			);
